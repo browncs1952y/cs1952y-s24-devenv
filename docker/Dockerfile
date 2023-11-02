@@ -20,7 +20,7 @@ RUN apt-get update &&\
   # install dependencies for gem5
   build-essential m4 scons zlib1g zlib1g-dev libprotobuf-dev\ 
   protobuf-compiler libprotoc-dev libgoogle-perftools-dev python3-dev\
-  libboost-all-dev pkg-config
+  python3-pip libboost-all-dev pkg-config
 
 # set up default locale
 RUN locale-gen en_US.UTF-8

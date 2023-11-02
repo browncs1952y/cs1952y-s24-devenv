@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Default date
+gem5_dir="/home/gem5"
+dist_dir="$gem5_dir/dist"
+date="20220707"
+
+# Function to display usage information
+usage() {
+  echo "Usage: $0 [-d <date>] [--help]"
+  echo "  -d      Specify the date for download (default: $date)"
+  echo "  --help  Display this help message and exit"
+  exit 1
+}
+
+# check for --help flag
+for arg in "$@"; do
+  if [ "$arg" = "--help" ]; then
+    usage
+  fi
+done
+
+# Parse command-line options
+while getopts ":d:" option; do
+  case $option in
+    d)
+      date="$OPTARG"
+      ;;
+    \?)
+      echo "Invalid option -$OPTARG"
+      usage 
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument."
+      usage
+      ;;
+  esac
+done
+
+# Create a 'dist' directory if it doesn't exist
+mkdir -p $dist_dir
+cd $dist_dir || exit 1
+
+# Download ARM system files
+system_file="aarch-system-$date.tar.bz2"
+system_url="http://dist.gem5.org/dist/v22-0/arm/$system_file"
+
+echo "Downloading ARM system files to $dist_dir..."
+wget "$system_url" -O "$system_file"
+bzip2 -d "$system_file"
+tar xvf "aarch-system-$date.tar"
+
+# Download Ubuntu disk image
+disk_file="ubuntu-18.04-arm64-docker.img.bz2"
+disk_url="http://dist.gem5.org/dist/v22-0/arm/disks/$disk_file"
+
+echo "Downloading Ubuntu disk image to $dist_dir..."
+wget "$disk_url" -O "$disk_file"
+bzip2 -d "$disk_file"
+mv "$disk_file" disks
+
+echo "Download completed."

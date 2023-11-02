@@ -10,13 +10,18 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/--
+
 # Command Line History (newest to oldest):
 :q
-|2,0,1698866978,,"q"
+|2,0,1698908201,,"q"
 :wq
 |2,0,1698866370,,"wq"
 
 # Search String History (newest to oldest):
+?/--
+|2,1,1698907528,47,"--"
 
 # Expression History (newest to oldest):
 
@@ -33,84 +38,250 @@
 |3,0,2,1,1,0,1698866368,"echo $opt"
 
 # File marks:
-'0  10  0  ~/cs1952y-build-gem5
-|4,48,10,0,1698866978,"~/cs1952y-build-gem5"
-'1  10  0  ~/cs1952y-build-gem5
-|4,49,10,0,1698866802,"~/cs1952y-build-gem5"
-'2  10  0  ~/cs1952y-build-gem5
-|4,50,10,0,1698866370,"~/cs1952y-build-gem5"
-'3  10  0  ~/cs1952y-build-gem5
-|4,51,10,0,1698866370,"~/cs1952y-build-gem5"
-'4  2  0  ~/cs1952y-build-gem5
-|4,52,2,0,1698866213,"~/cs1952y-build-gem5"
-'5  2  0  ~/cs1952y-build-gem5
-|4,53,2,0,1698866213,"~/cs1952y-build-gem5"
-'6  2  0  ~/cs1952y-build-gem5
-|4,54,2,0,1698866213,"~/cs1952y-build-gem5"
-'7  2  0  ~/cs1952y-build-gem5
-|4,55,2,0,1698866213,"~/cs1952y-build-gem5"
-'8  2  0  ~/cs1952y-build-gem5
-|4,56,2,0,1698866213,"~/cs1952y-build-gem5"
-'9  2  0  ~/cs1952y-build-gem5
-|4,57,2,0,1698866213,"~/cs1952y-build-gem5"
+'0  118  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,48,118,0,1698908201,"/home/gem5/configs/learning_gem5/part1/simple.py"
+'1  1  0  /home/gem5/configs/learning_gem5/part1/simple
+|4,49,1,0,1698908056,"/home/gem5/configs/learning_gem5/part1/simple"
+'2  137  8  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,50,137,8,1698908037,"/home/gem5/configs/learning_gem5/part1/caches.py"
+'3  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,51,120,9,1698907546,"/home/gem5/configs/learning_gem5/part1/caches.py"
+'4  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,52,120,9,1698907546,"/home/gem5/configs/learning_gem5/part1/caches.py"
+'5  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,53,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+'6  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,54,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+'7  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,55,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+'8  29  0  /home/gem5/configs/example/se.py
+|4,56,29,0,1698906891,"/home/gem5/configs/example/se.py"
+'9  10  0  ~/cs1952y-build-gem5
+|4,57,10,0,1698866978,"~/cs1952y-build-gem5"
 
 # Jumplist (newest first):
--'  10  0  ~/cs1952y-build-gem5
-|4,39,10,0,1698866978,"~/cs1952y-build-gem5"
--'  10  0  ~/cs1952y-build-gem5
-|4,39,10,0,1698866802,"~/cs1952y-build-gem5"
--'  10  0  ~/cs1952y-build-gem5
-|4,39,10,0,1698866370,"~/cs1952y-build-gem5"
--'  2  0  ~/cs1952y-build-gem5
-|4,39,2,0,1698866366,"~/cs1952y-build-gem5"
--'  2  0  ~/cs1952y-build-gem5
-|4,39,2,0,1698866366,"~/cs1952y-build-gem5"
--'  2  0  ~/cs1952y-build-gem5
-|4,39,2,0,1698866366,"~/cs1952y-build-gem5"
--'  2  0  ~/cs1952y-build-gem5
-|4,39,2,0,1698866213,"~/cs1952y-build-gem5"
--'  1  0  ~/cs1952y-build-gem5
-|4,39,1,0,1698866211,"~/cs1952y-build-gem5"
--'  1  0  ~/cs1952y-build-gem5
-|4,39,1,0,1698866211,"~/cs1952y-build-gem5"
--'  1  0  ~/cs1952y-build-gem5
-|4,39,1,0,1698866211,"~/cs1952y-build-gem5"
--'  1  0  ~/cs1952y-build-gem5
-|4,39,1,0,1698866211,"~/cs1952y-build-gem5"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
--'  1  0  /home/gem5/requirements.txt
-|4,39,1,0,1698865629,"/home/gem5/requirements.txt"
+-'  118  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,118,0,1698908201,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  91  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,91,0,1698908060,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,80,0,1698908058,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple
+|4,39,1,0,1698908056,"/home/gem5/configs/learning_gem5/part1/simple"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple
+|4,39,1,0,1698908056,"/home/gem5/configs/learning_gem5/part1/simple"
+-'  137  8  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,137,8,1698908037,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  137  8  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,137,8,1698908037,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  137  8  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,137,8,1698908037,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  137  8  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,137,8,1698908037,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,120,9,1698907936,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,120,9,1698907936,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,120,9,1698907936,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,120,9,1698907936,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,120,9,1698907546,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,120,9,1698907546,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,120,9,1698907546,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  120  9  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,120,9,1698907546,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,1,0,1698907528,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,1,0,1698907528,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,1,0,1698907528,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,1,0,1698907528,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,1,0,1698907528,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,1,0,1698907528,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,1,0,1698907528,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/caches.py
+|4,39,1,0,1698907528,"/home/gem5/configs/learning_gem5/part1/caches.py"
+-'  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  80  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,80,0,1698907520,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,1,0,1698907510,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,1,0,1698907510,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,1,0,1698907510,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,1,0,1698907510,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,1,0,1698907510,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,1,0,1698907510,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,1,0,1698907510,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,1,0,1698907510,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  1  0  /home/gem5/configs/learning_gem5/part1/simple.py
+|4,39,1,0,1698907510,"/home/gem5/configs/learning_gem5/part1/simple.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  23  0  /home/gem5/configs/common/CacheConfig.py
+|4,39,23,0,1698907329,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
+-'  247  4  /home/gem5/configs/common/CacheConfig.py
+|4,39,247,4,1698907184,"/home/gem5/configs/common/CacheConfig.py"
 
 # History of marks within files (newest to oldest):
+
+> /home/gem5/configs/learning_gem5/part1/simple.py
+	*	1698908073	0
+	"	118	0
+
+> /home/gem5/configs/learning_gem5/part1/simple
+	*	1698908055	0
+	"	1	0
+
+> /home/gem5/configs/learning_gem5/part1/caches.py
+	*	1698908036	0
+	"	137	8
+
+> /home/gem5/configs/common/CacheConfig.py
+	*	1698907328	0
+	"	23	0
+
+> /home/gem5/configs/example/se.py
+	*	1698906887	0
+	"	29	0
 
 > ~/cs1952y-build-gem5
 	*	1698866976	0

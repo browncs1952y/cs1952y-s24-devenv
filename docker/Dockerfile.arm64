@@ -13,6 +13,10 @@ RUN apt-get update &&\
   apt-get -y install\
   # install GCC-related packages
   binutils-doc cpp-doc gcc-doc g++ g++-multilib gdb gdb-doc glibc-doc\
+  # install GCC-related packages for amd64
+  g++-9-x86-64-linux-gnu gdb-multiarch libc6:amd64 libstdc++6:amd64\
+  libasan5:amd64 libtsan0:amd64 libubsan1:amd64 libreadline-dev:amd64\
+  libblas-dev:amd64 liblapack-dev:amd64 qemu-user\
   # install programs used for system exploration
   blktrace linux-tools-generic strace tcpdump\
   # install interactive programs (emacs, vim, nano, man, sudo, etc.)
@@ -26,6 +30,16 @@ RUN apt-get update &&\
   build-essential m4 scons zlib1g zlib1g-dev libprotobuf-dev\ 
   protobuf-compiler libprotoc-dev libgoogle-perftools-dev python3-dev\
   python3
+
+# link x86-64 versions of common tools into /usr/x86_64-linux-gnu/bin
+RUN for i in addr2line c++filt cpp-9 g++-9 gcc-9 gcov-9 gcov-dump-9 gcov-tool-9 size strings; do \
+        ln -s /usr/bin/x86_64-linux-gnu-$i /usr/x86_64-linux-gnu/bin/$i; done && \
+  ln -s /usr/bin/x86_64-linux-gnu-cpp-9 /usr/x86_64-linux-gnu/bin/cpp && \
+  ln -s /usr/bin/x86_64-linux-gnu-g++-9 /usr/x86_64-linux-gnu/bin/c++ && \
+  ln -s /usr/bin/x86_64-linux-gnu-g++-9 /usr/x86_64-linux-gnu/bin/g++ && \
+  ln -s /usr/bin/x86_64-linux-gnu-gcc-9 /usr/x86_64-linux-gnu/bin/gcc && \
+  ln -s /usr/bin/x86_64-linux-gnu-gcc-9 /usr/x86_64-linux-gnu/bin/cc && \
+  ln -s /usr/bin/gdb-multiarch /usr/x86_64-linux-gnu/bin/gdb
 
 # set up default locale
 RUN locale-gen en_US.UTF-8

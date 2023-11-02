@@ -6,26 +6,28 @@ isa="X86"
 build_type="opt"
 
 usage() {
-    echo "Usage: $0 [-i <ISA>] [-d <directory>] [-b <build type>] [--help]"
-    echo "  -i  Set ISA (default: $isa)"
-    echo "  -b  Set build type (default: $build_type)"
-    echo "  --help  Display this help message and exit"
-    exit 1
+  echo "Usage: $0 [-i <ISA>] [-d <directory>] [-b <build type>] [--help]"
+  echo "  -i      Set ISA (default: $isa)"
+  echo "  -b      Set build type (default: $build_type)"
+  echo "  --help  Display this help message and exit"
+  exit 1
 }
 
 # check for --help flag
 for arg in "$@"; do
-    if [ "$arg" = "--help" ]; then
-        usage
-    fi
+  if [ "$arg" = "--help" ]; then
+    usage
+  fi
 done
 
 # parse command-line arguments
 while getopts ":i:b:" option; do
   case $option in
-    i) isa="$OPTARG"
+    i) 
+      isa="$OPTARG"
       ;;
-    b) build_type="$OPTARG"
+    b) 
+      build_type="$OPTARG"
       ;;
     \?) 
       echo "Invalid option -$OPTARG" >&2
@@ -44,5 +46,7 @@ cd "$gem5_dir" || { echo "Failed to change to directory $gem5_dir"; exit 1; }
 # compile gem5
 compile_command="python3 $(which scons) build/$isa/gem5.$build_type -j9"
 
-echo "$compile_command"
+echo "Compiling gem5..."
 yes | $compile_command
+
+echo "Compilation completed."
