@@ -1,0 +1,53 @@
+#! /bin/bash
+
+cd "$(dirname "$0")" || exit
+
+arch="$(uname -m)"
+tag=
+platform=
+
+# set platform based on architecture
+while test "$#" -ne 0; do
+    case "$1" in 
+      -a | --arm | --arm64)
+        if test "$arch" = "arm64" -o "$arch" = "aarch64"; then
+            platform=linux/arm64
+            shift
+        else
+            echo "\`cs1952y-setup-docker --arm\` only works on ARM64 hosts" 1>&2
+            exit 1
+        fi
+        ;;
+      -x | --x86-64 | --x86_64 | --amd64)
+        platform=linux/amd64
+        shift
+        ;;
+      *)
+        if test "$arch" = "arm64" -o "$arch" = "aarch64"; then
+            armtext=" [-a|--arm] [-x|--x86-64]"
+        fi
+        echo "Usage: cs1952y-setup-docker$armtext" 1>&2
+        exit 1
+        ;;
+    esac
+done
+
+# set default platform if no arguments were provided
+if test -z "$platform" -a \( "$arch" = "arm64" -o "$arch" = "aarch64" \); then
+    platform=linux/arm64
+elif test -z "$platform"; then
+    platform=linux/amd64
+fi
+
+# set docker tag based on platform
+if test -z "$tag" -a "$platform" = linux/arm64; then
+    tag=cs1952y:arm64
+elif test -z "$tag"; then
+    tag=cs1952y:latest
+fi
+
+dockeruser=mramesh5
+image=$dockeruser/$tag
+
+docker pull $image
+docker tag $image $tag
