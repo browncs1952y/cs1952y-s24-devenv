@@ -6,7 +6,7 @@ isa="X86"
 build_type="opt"
 
 usage() {
-  echo "Usage: $0 [-i <ISA>] [-d <directory>] [-b <build type>] [--help]"
+  echo "Usage: $0 [-i <ISA>] [-b <build type>] [--help]"
   echo "  -i      Set ISA (default: $isa)"
   echo "  -b      Set build type (default: $build_type)"
   echo "  --help  Display this help message and exit"
@@ -44,7 +44,7 @@ done
 cd "$gem5_dir" || { echo "Failed to change to directory $gem5_dir"; exit 1; }
 
 # compile gem5
-compile_command="python3 $(which scons) build/$isa/gem5.$build_type -j9"
+compile_command="python3 $(which scons) build/$isa/gem5.$build_type -j4"
 
 echo "Compiling gem5..."
 yes | $compile_command
