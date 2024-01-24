@@ -180,14 +180,14 @@ displayarg=""
 x11mountarg=""
 case "$(uname)" in 
   "Linux")
-    displayarg="-e DISPLAY"
-    x11mountarg="-v /tmp/.X11-unix:/tmp/.X11-unix"
+    displayarg="-e DISPLAY "
+    x11mountarg="-v /tmp/.X11-unix:/tmp/.X11-unix "
     ;;
   "Darwin")
-    displayarg="-e DISPLAY=host.docker.internal:0"
+    displayarg="-e DISPLAY=host.docker.internal:0 "
     ;;
   "CYGWIN"*|"MINGW32"*|"MSYS"*|"MINGW"*)
-    displayarg="-e DISPLAY=host.docker.internal:0.0"
+    displayarg="-e DISPLAY=host.docker.internal:0.0 "
     ;;
   *)
     echo "Unsupported OS for X11 forwarding"

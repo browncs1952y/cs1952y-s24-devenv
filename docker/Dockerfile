@@ -46,6 +46,10 @@ RUN git clone https://github.com/gem5/gem5 /home/gem5 &&\
   chmod ugo+rx,u+w,go-w /home/gem5 &&\
   chown -R cs1952y-user:cs1952y-user /home/gem5
 
+# compile gem5
+RUN cd /home/gem5 &&\
+  scons build/RISCV/gem5.debug -j4
+
 # clone qt6 repo
 RUN git clone git://code.qt.io/qt/qt5.git /home/qt6 &&\
   cd /home/qt6 &&\
@@ -73,7 +77,6 @@ RUN cd /home/Ripes &&\
 ARG USER=cs1952y\ User
 ARG EMAIL=nobody@example.com
 
-# configure your environment
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 

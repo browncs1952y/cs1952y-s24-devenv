@@ -97,11 +97,10 @@ RUN cd /home/Ripes &&\
   cmake . -DCMAKE_PREFIX_PATH=/home/qt6/install &&\
   make -j8
 
-# git build arguments
+# configure your environment
 ARG USER=cs1952y\ User
 ARG EMAIL=nobody@example.com
 
-# configure your environment
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
