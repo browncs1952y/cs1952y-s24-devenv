@@ -49,13 +49,13 @@ RUN git clone https://github.com/gem5/gem5 /home/gem5 &&\
 # clone qt6 repo
 RUN git clone git://code.qt.io/qt/qt5.git /home/qt6 &&\
   cd /home/qt6 &&\
-  git switch 6.5.1
+  git switch 6.5.1 &&\
+  perl init-repository --module-subset=qtbase,qtsvg,qtcharts
 
 # build qt6.5.1 from source
-RUN perl init-repository --module-subset=qtbase,qtsvg,qtcharts &&\
-  mkdir /home/qt6.5.1-build &&\
+RUN mkdir /home/qt6.5.1-build &&\
   cd /home/qt6.5.1-build &&\
-  ../configure -prefix /home/qt6/install &&\
+  ../qt6/configure -prefix /home/qt6/install &&\
   cmake --build . --parallel 4 &&\
   cmake --install .
 
@@ -68,10 +68,6 @@ RUN git clone --recursive https://github.com/browncs1952y/Ripes-1952y /home/Ripe
 RUN cd /home/Ripes &&\
   cmake . -DCMAKE_PREFIX_PATH=/home/qt6/install &&\
   make -j8
-
-# git build arguments
-ARG USER=cs1952y\ User
-ARG EMAIL=nobody@example.com
 
 # configure your environment
 ARG USER=cs1952y\ User
