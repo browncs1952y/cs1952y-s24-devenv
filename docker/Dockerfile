@@ -42,30 +42,29 @@ RUN useradd -m -s /bin/bash cs1952y-user && \
 RUN (echo '#\!/bin/sh'; echo 'echo 1') > /usr/bin/cs1952y-docker-version; chmod ugo+rx,u+w,go-w /usr/bin/cs1952y-docker-version
 
 # clone gem5 repo
-RUN git clone https://github.com/gem5/gem5 /home/gem5 &&\
-  chmod ugo+rx,u+w,go-w /home/gem5 &&\
-  chown -R cs1952y-user:cs1952y-user /home/gem5
+RUN git clone https://github.com/gem5/gem5 /home/cs1952y-user/gem5 &&\
+  chmod ugo+rx,u+w,go-w /home/cs1952y-user/gem5
 
 # clone qt6 repo
 RUN git clone git://code.qt.io/qt/qt5.git /home/qt6 &&\
   cd /home/qt6 &&\
-  git switch 6.5.1
+  git switch 6.5.1 &&\
+  perl init-repository --module-subset=qtbase,qtsvg,qtcharts
 
 # build qt6.5.1 from source
-RUN perl init-repository --module-subset=qtbase,qtsvg,qtcharts &&\
-  mkdir /home/qt6.5.1-build &&\
+RUN mkdir /home/qt6.5.1-build &&\
   cd /home/qt6.5.1-build &&\
-  ../configure -prefix /home/qt6/install &&\
+  ../qt6/configure -prefix /home/qt6/install &&\
   cmake --build . --parallel 4 &&\
   cmake --install .
 
 ENV CMAKE_PREFIX_PATH=/home/qt6/install
 
 # clone Ripes repo
-RUN git clone --recursive https://github.com/mortbopet/Ripes.git /home/Ripes
+RUN git clone --recursive https://github.com/browncs1952y/Ripes-1952y /home/cs1952y-user/Ripes
 
 # build ripes from source
-RUN cd /home/Ripes &&\
+RUN cd /home/cs1952y-user/Ripes &&\
   cmake . -DCMAKE_PREFIX_PATH=/home/qt6/install &&\
   make -j8
 
