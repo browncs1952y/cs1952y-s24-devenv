@@ -41,15 +41,6 @@ RUN useradd -m -s /bin/bash cs1952y-user && \
 # create binary reporting version of dockerfile
 RUN (echo '#\!/bin/sh'; echo 'echo 1') > /usr/bin/cs1952y-docker-version; chmod ugo+rx,u+w,go-w /usr/bin/cs1952y-docker-version
 
-# clone gem5 repo
-RUN git clone https://github.com/gem5/gem5 /home/gem5 &&\
-  chmod ugo+rx,u+w,go-w /home/gem5 &&\
-  chown -R cs1952y-user:cs1952y-user /home/gem5
-
-# compile gem5
-RUN cd /home/gem5 &&\
-  scons build/RISCV/gem5.debug -j4
-
 # clone qt6 repo
 RUN git clone git://code.qt.io/qt/qt5.git /home/qt6 &&\
   cd /home/qt6 &&\
@@ -66,23 +57,27 @@ RUN mkdir /home/qt6.5.1-build &&\
 ENV CMAKE_PREFIX_PATH=/home/qt6/install
 
 # clone Ripes repo
-RUN git clone --recursive https://github.com/browncs1952y/Ripes-1952y /home/Ripes
+RUN git clone --recursive https://github.com/browncs1952y/Ripes-1952y /home/cs1952y-user/Ripes
 
 # build ripes from source
-RUN cd /home/Ripes &&\
+RUN cd /home/cs1952y-user/Ripes &&\
   cmake . -DCMAKE_PREFIX_PATH=/home/qt6/install &&\
   make -j8
+
+# clone gem5 repo
+RUN git clone https://github.com/gem5/gem5 /home/cs1952y-user/gem5 &&\
+  chmod ugo+rx,u+w,go-w /home/cs1952y-user/gem5
+
+# compile gem5
+RUN cd /home/cs1952y-user/gem5 &&\
+  scons build/RISCV/gem5.debug -j4
 
 # configure your environment
 ARG USER=cs1952y\ User
 ARG EMAIL=nobody@example.com
 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-
 USER cs1952y-user
 RUN rm -f ~/.bash_logout
 
 WORKDIR /home/cs1952y-user
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["/bin/bash", "-l"]

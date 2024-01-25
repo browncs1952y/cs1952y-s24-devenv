@@ -96,6 +96,21 @@ set_xhost() {
   esac
 }
 
+copy_directories_to_host() {
+  temp_container_name="${container_name}-temp"
+
+  echo "Starting temporary container to copy files..."
+  docker run -d --name "$temp_container_name" --platform "$platform" "$tag"
+
+  echo "Copying gem5 and Ripes directories to host..."
+  docker cp "${temp_container_name}:/home/cs1952y-user/gem5" "$maindir/home"
+  docker cp "${temp_container_name}:/home/cs1952y-user/Ripes" "$maindir/home"
+
+  echo "Stopping and removing temporary container..."
+  docker stop "$temp_container_name"
+  docker rm "$temp_container_name"
+}
+
 remove_containers() {
   echo "Removing all existing cs1952y containers..."
   docker ps -a -f name=cs1952y --format "{{.ID}}" | while read -r line; do
@@ -110,6 +125,8 @@ start_container() {
 }
 
 start_new_container() {
+  copy_directories_to_host
+
   echo "Starting a new container..."
   vexec docker run -it \
       --name $container_name \
