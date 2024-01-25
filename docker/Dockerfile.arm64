@@ -89,7 +89,7 @@ RUN cd /home/cs1952y-user/Ripes &&\
   make -j8
 
 # clone gem5 repo
-RUN git clone https://github.com/browncs1952y/gem5-assignments-stencil.git /home/cs1952y-user/gem5 &&\
+RUN git clone https://github.com/browncs1952y/gem5-assignments-stencil /home/cs1952y-user/gem5 &&\
   chmod ugo+rx,u+w,go-w /home/cs1952y-user/gem5
 
 # compile gem5
